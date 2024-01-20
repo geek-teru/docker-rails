@@ -1,0 +1,13 @@
+version: '3'
+services:
+ rails:
+  container_name: rails.local
+  build: ./rails_local
+  ports:
+    - 3000:3000
+  image: rails:latest
+  tty: true
+  volumes:
+    - type: bind
+      source: ./rails
+      target: /rails
